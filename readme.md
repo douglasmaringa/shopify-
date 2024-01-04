@@ -39,3 +39,30 @@ Press enter, and now your theme will have a config.yml.
 
 theme watch --allow-live
 Now, you can begin developing your Shopify theme.
+
+To test payments , go to settings / payments activate test payments then use the following cards to test payments.
+
+1.Simulate successful transactions
+
+Name on card: Enter at least two words.
+Expiry date: Enter any date in the future.
+Security code: Enter any three digits.
+Card number: Use any of the following numbers:
+Card type	Test credit number
+
+Visa	4242424242424242
+Mastercard	5555555555554444
+American Express	378282246310005
+Discover	6011111111111117
+Diners Club	30569309025904
+JCB	3530111333300000
+
+Simulate failed transactions
+If you want to view the credit card error messages that might be displayed to a customer during checkout, then you can use these test credit card numbers to simulate different failed transactions:
+
+Use credit card number 4000000000000002 to generate a card declined message.
+Use credit card number 4242424242424241 to generate an incorrect number message.
+Use credit card number 4000000000000259 to simulate a disputed transaction.
+Use an invalid expiry month, for example 13, to generate an invalid expiry month message.
+Use an expiry year in the past to generate an invalid expiry year message.
+Use a two-digit security code number to generate an invalid security code message.
