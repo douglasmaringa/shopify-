@@ -1,8 +1,22 @@
-<h1>{{ shop.name }}</h1>
-<p>{{ section.settings.collection }}</p>
-  {% for product in collections["frontpage"].products %}
-    {{- product.title | link_to: product.url }}
-  {% endfor %}
+<div class="min-h-screen container mx-auto">
+  <h1 class="text-center my-4">{{ collections["frontpage"].title }}</h1>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    {% for product in collections["frontpage"].products %}
+      <div class="bg-white p-4 rounded-md shadow-md">
+        <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}" class="w-full h-32 object-cover mb-4">
+
+        <h2 class="text-lg font-bold">{{ product.title | link_to: product.url }}</h2>
+        <p class="text-gray-700">{{ product.price | money }}</p>
+
+        <p class="mt-2">{{ product.description }}</p>
+
+        <a href="{{ product.url }}" class="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded-md">View Product</a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
 
 {% schema %}
   {

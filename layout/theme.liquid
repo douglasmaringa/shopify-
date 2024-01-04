@@ -2,9 +2,10 @@
     <head>
         {{ content_for_header }}
         {{ 'style.css' | asset_url | stylesheet_tag }}
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     </head>
 
-    <body>
+    <body class="max-w-7xl mx-auto">
         {{ content_for_layout }}
         {{ 'scripts.js' | asset_url | script_tag }}
     </body>

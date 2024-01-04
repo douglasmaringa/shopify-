@@ -1,22 +1,29 @@
-{% form 'cart' , cart %}
-    <h1>cart page</h1>
-    
+{% form 'cart', cart %}
+  <div class="min-h-screen container mx-auto mt-8 p-4">
+    <h1 class="text-2xl font-bold mb-4">Shopping Cart</h1>
+
     {% for item in cart.items %}
+      <div class="flex items-center mb-4 border-b border-gray-300 pb-4">
+        <img src="{{ item.image | image_url: width: 200 }}" class="w-16 h-16 object-cover mr-4" alt="{{ item.title }}">
+        
         <div>
-           <img src="{{ item.image | image_url: width: 200 }}"/>
-             <h2>{{ item.title }}</h2>
-           <h2>{{ item.price }}</h2>
-           <a href="{{ item.url_to_remove }}">Remove</a>
+          <h2 class="text-lg font-bold">{{ item.title }}</h2>
+          <p class="text-gray-700">{{ item.price }}</p>
+          <a href="{{ item.url_to_remove }}" class="text-red-500 hover:underline">Remove</a>
         </div>
+      </div>
     {% endfor %}
-    <hr/>
-    <h2>Total: {{ cart.total_price }}</h2>
-    
-    <button type="submit" name="checkout">
-        Checkout
-    </button>
-    
-    {% endform %}
+
+    <hr class="my-4">
+
+    <div class="flex justify-between">
+      <h2 class="text-xl font-bold">Total: {{ cart.total_price }}</h2>
+      
+      <button type="submit" name="checkout" class="bg-blue-500 text-white px-4 py-2 rounded-md">Checkout</button>
+    </div>
+  </div>
+{% endform %}
+
 
 {% schema %}
   {
