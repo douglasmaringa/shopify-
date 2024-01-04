@@ -1,0 +1,15 @@
+<h1>{{ shop.name }}</h1>
+<p>{{ section.settings.collection }}</p>
+  {% for product in collections["frontpage"].products %}
+    {{- product.title | link_to: product.url }}
+  {% endfor %}
+
+{% schema %}
+  {
+    "name":"main",
+    "tag": "section",
+    "class": "main",
+    "settings":[],
+    "presets":[{"name":"default-main"}]
+  }
+{% endschema %}

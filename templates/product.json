@@ -1,0 +1,21 @@
+{
+    "sections":{
+        "header":{
+            "type":"header",
+            "settings":{}
+        },
+        "product":{
+            "type":"product",
+            "settings":{}
+        },
+        "footer":{
+            "type":"footer",
+            "settings":{}
+        }
+    },
+    "order":[
+        "header",
+        "product",
+        "footer"
+    ]
+}

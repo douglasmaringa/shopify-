@@ -1,0 +1,18 @@
+<h1>header</h1>
+<p>{{section.settings.title}}</p>
+
+{% schema %}
+  {
+    "name":"header",
+    "tag": "section",
+    "class": "header",
+    "settings":[
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Text"
+        }
+    ],
+    "presets":[{"name":"default-header"}]
+  }
+{% endschema %}

@@ -1,0 +1,18 @@
+<h1>footer</h1>
+<p>{{section.settings.title}}</p>
+
+{% schema %}
+  {
+    "name":"footer",
+    "tag": "section",
+    "class": "footer",
+    "settings":[
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Text"
+        }
+    ],
+    "presets":[{"name":"default-footer"}]
+  }
+{% endschema %}
